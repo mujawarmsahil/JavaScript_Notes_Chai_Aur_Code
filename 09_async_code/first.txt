@@ -1,0 +1,13 @@
+Javascript is a by default synchronous and single threaded language
+We have some exception but this is used when we needed
+Single threaded means stop further work until current complete work
+
+    Blocking code                                Non-Blocking code
+      (sync)                                          (async)  
+
+Block the flow of diagram                        does not block the execution
+example :- Read file sync                         read file async
+wait as it is until I complete my work          Do your work until i am doing my work later i will join you
+
+Both are good .We can use both codes as per the use-case
+Blocking code :- registering the user (wait until i check and store data in database)

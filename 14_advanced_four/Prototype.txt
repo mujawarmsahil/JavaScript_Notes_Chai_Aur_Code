@@ -1,0 +1,4 @@
+JavaScript is a prototype based language which means every thing in JS is a prototype and Object
+Classes in JS are just syntactic sugar .
+
+Object is a parent of all Array , String , Function etc.

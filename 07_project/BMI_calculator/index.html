@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/07_project/BMI_calculator/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>BMI CALCULATOR</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col ">
+                <h4 class="  animate__animated animate__fadeInDown">BMI CALCULATOR</h4>
+            </div>
+        </div>
+        <div class="main-content-row">
+            <div class="main-content-col">
+                <form>
+                    <p><label for="weight">Weight (kg): </label> <input type="number" id="weight" ></p>
+                    <p><label for="height">Height(cm): </label> <input type="number" id="height"></p>
+                    <button type="submit" id="calculate">Calculate</button>
+                    <div class="result"></div>
+                </form>
+            </div>
+            <div class="guide">
+                <h4>BMI Guide</h4>
+                <p>Under-weight = &lt; 18.6</p>
+                <p>Normal weight = 18.6 to 24.9</p>
+                <p>Over-weight = &gt; 24.9</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="/07_project/BMI_calculator/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+*
+{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+body , html
+{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ccc;
+}
+
+
+.container
+{
+    width: 100%;
+    height: 100vh;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header , footer
+{
+    width: 100%;
+    height: 100px;
+    background-color: #bbbbbb63;
+    line-height: 100px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.button-body  button
+{
+    width: 125px;
+    height: 60px;
+    margin: 0 20px;
+    border-radius: 8px;
+    font-weight: 1.2rem;
+    /*outline: none;
+    */border: none;
+    font-weight: bolder;
+    color: white;
+    scale: 0.9;
+    box-shadow: 0 2px 2px 2px #bbb;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: 0.6s all;
+    -webkit-transition: 0.6s all;
+    -moz-transition: 0.6s all;
+    -ms-transition: 0.6s all;
+    -o-transition: 0.6s all;
+}
+
+.button-body  button:hover
+{
+    scale: 1;
+}
+
+.button-body button:first-child
+{
+    background-color:thistle;
+}
+
+.button-body button:last-child
+{
+    background-color:seashell;
+    color: black;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: #2e2121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .card
+        {
+            width: 200px;
+            height: 300px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        .card img
+        {
+            width: 100%;
+            height:250px ;
+        }
+
+        .card p
+        {
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        AJAX :- Asynchronized javascript and XML programming 
+        In the past we used xmlhttp request for API calling
+        request sent by xmlhttp request is called ajax request
+        in this we have states 
+        for example readyState:-
+        0 ==> unsent (Matlb abhi request bheji nahi hain)
+        1 ==> opened (Matlb request bheji hain)
+        2 ==> headers_received (Matlb response aya hain pata nahi kya aya hain)
+        3 ==> loading (response data download ho rha hain)
+        4 ==> done (operation completed data transferenced to receiver)
+    -->
+
+    <script>
+        const requestURL = `https://api.github.com/users/hiteshchoudhary`; // api taken which contains a user information
+        const xmlrequest = new XMLHttpRequest();//created a obj of XMLHttpRequest
+
+        xmlrequest.open('GET',requestURL);//this is method where we give method of data means get post put and a api
+        xmlrequest.send();
+        xmlrequest.onreadystatechange = function () { // this is variable which holds a function and track the change in ready state continiously
+            console.log(xmlrequest.readyState) // this will give number means states 0 , 1 , 2 , 3 means unsent opened headers_received , loading , done
+            if(xmlrequest.readyState === 4)//jab request data leke aye tab
+            {
+                const data = JSON.parse(this.responseText); // this.responseText will give you data in string format hence we have to convert it in JSON to access the data.If you want to check the type use typeOf(data) without parsing
+
+                console.log(typeof data);
+                console.log(data.followers)
+                const card = document.createElement('div');
+                document.body.appendChild(card);
+                card.classList.add("card");
+
+                card.innerHTML = `<img src="${data.avatar_url}"> <p>${data.followers}</p>`; //complete this task
+            }
+            
+        }
+    </script>
+</body>
+</html>

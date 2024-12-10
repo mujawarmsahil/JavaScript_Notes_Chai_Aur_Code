@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Fourth tutorial</title>
+    <style>
+        body
+        {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="language">
+        <li>javascript</li>
+        <li>cpp</li>
+        <li>java</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName)
+    {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector(".language").appendChild(li);
+    }
+
+    addLanguage("Python")
+
+    //opitmized function
+
+    function addOptLanguage(LangName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(LangName));
+        document.querySelector(".language").appendChild(li);
+    }
+
+    addOptLanguage("Typescript")
+
+    const secondLang = document.querySelector("li:nth-child(2)")
+
+    secondLang.innerHTML = "ruby" ;
+
+    const newLi = document.createElement("li")
+    newLi.textContent = "mojo";
+    secondLang.replaceWith(newLi)
+
+</script>
+</html>

@@ -1,0 +1,68 @@
+JavaScript Execution Context
+JCE means how the js file will run
+whenever we give code to js then the things will create are
+1 - Global EC and it will refered to this keyword . In browser global object is window
+    js is single threaded
+2 - Function / functional execution Context
+3 - Eval execution Context
+
+how the js code get executed
+{} --> js code 
+1 - Memory creation phase / Memory phase / creation phase (MCP / CPP)
+    in this memory is allocated to variables and other stuff
+2 - Execution phase
+    all the operations are to be done
+
+  --------------------------------------------------  code --------------------------------------------
+  let val1 = 50;
+  let val2 = 60;
+  function addVal(num1,num2)
+  {
+        let total = num1 + num2;
+        return total;
+  }
+
+  let result_1 = addVal(val1,val2);
+  let result_2 = addVal(10,90);
+
+  execution while running this code
+  1) global execution and it allocated to "this" keyword
+  2) all the variables are get allocated in Memory
+    1st line val1 -> undefined
+    2nd line val2 -> undefined
+    3rd line addVal -> defination of function
+    7th line result_1 -> undefined
+    8th line result_2 -> undefined
+  3)Execution phase
+    val1 -> 50 
+    val2 -> 60
+    addVal(val1,val2)   --> one more executional Context will create
+    note -> in this new variable enviroment and execution thread will create an this is called as sandbox and in this new memory creation phase and execution phase will create
+        1 - memory phase
+            val1 -> undefined
+            val2 -> undefined
+            total -> undefined
+        2- Execution Context
+            num1 -> val1 -> 50
+            num2 -> val2 -> 60
+            total -> 110
+            here total is also get returned and it will returned to parent excutional context or global executional context
+    after that the sandbox will get deleted
+    result_1 -> 110
+    same sandbox and phases are created to another function call
+    result_2 -> 100
+
+    //CALL Stack
+
+    |                          |
+    |                          |
+    |                          |
+    |                          |
+    |                          |
+    |                          |
+    |    addVal(10,90)         |
+    |    addVal(val1 , val2)   |
+    |    Global execution      |
+    |__________________________| 
+
+    this is a call stack and this follows LIFO means last in first out if the excution completed the function is removed from stack

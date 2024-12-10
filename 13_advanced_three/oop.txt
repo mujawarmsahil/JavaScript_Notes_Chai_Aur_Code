@@ -1,0 +1,9 @@
+JavaScript is a prototype-based language
+
+Does JavaScript contains term classes?
+Yes , JavaScript does have classes . This feature was introduced with ES6.
+But JavaScript is primarily prototype-based language and its classes are primarily syntactic sugar over existing prototype-bases inheritance mechanisms.  
+
+OOPS -> It is programming paradigm means a style of writing code 
+Object -> Collection of properties and methods
+

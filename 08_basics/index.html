@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript |HTML Events</title>
+    <style>
+        body
+        {
+            background-color: #202020;
+
+        }
+        ul li
+        {
+            margin: 10px 0 ;
+        }        
+        
+        ul li  img
+        {
+            width: 300px;
+            height: 300px;
+            transition: all 0.5s;
+        }
+
+        ul li img.removeImg
+        {
+            opacity: 0;
+            display: none;
+        }
+
+        a
+        {
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Images</h2>
+    <div>
+        <ul id="images">
+            <li><img id="ella" class="img" src="/08_basics/img/ella-baxter-EfmG0wTPyvQ-unsplash.jpg" alt=""></li>
+            <li><img id="flare" class="img" src="/08_basics/img/wallpaperflare.com_wallpaper.jpg" alt=""></li>
+            <!-- <li><img id="wallpaper" src="/08_basics/img/wallpapers.jpg" onclick="alert('wallpaper')" alt=""></li>  ----------------- here is a first approach to listen event on element of html .Buts its not a feasiblr approach because it will cause problem in a scalable project-->
+            <li><img id="wallpaper" class="img" src="/08_basics/img/wallpapers.jpg"  alt=""></li>
+            <li><img id="netflix"  class="img" src="/08_basics/img/wp1917127-netflix-wallpapers.jpg" alt=""></li>
+            <li><a href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+    <script src="/08_basics/js/script.js"></script>
+</body>
+</html>

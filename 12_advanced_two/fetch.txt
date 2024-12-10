@@ -1,0 +1,28 @@
+It is a feature of node.js 
+It is a method starts the process of fetching a resource from the network , returning a promise which is fulfilled once the response is available.
+
+Interview question
+Question -> Suppose we request using promise and gives 404 error then where it will come? in reject or resolve ?
+Answer -> It always comes in resolve because its a response .Reject means we failed to request but in this case we requested but from there we get response as 404 error
+
+
+High priority queue is also known as micro task queue / fetch queue / priority queue
+
+
+How the fetch works ?
+
+response = fetch('address');
+
+this fetch further divide into 2 parts 
+1. data :- means the responses are stored in this section.This is a private field we cannot put or remove data in it or from it
+ data : 
+    onFulfilled[]
+    onRejection[]
+
+There are two arrays in data which are not accessible to developers to push data in it 
+After getting response the data is automatically pushed in either onFulfilled or onRejection as per the response.
+
+2.web browser API / node API
+In this the network request is sent to resource then the response either it rejected or responded pushed in the arrays of data section.
+
+further its responsibility of data to give the response for the global context

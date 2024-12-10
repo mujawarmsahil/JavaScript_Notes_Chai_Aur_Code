@@ -1,0 +1,168 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color:ghostwhite;
+}
+
+.container
+{
+    width: 100%;
+    min-height: 100vh;
+    border: 2px solid saddlebrown;
+}
+
+header
+{
+    width: 100%;
+    height: 100px;
+    background-color:rgba(240, 255, 255, 0.315);
+    box-shadow: 0 0 2px 5px #ddd;
+}
+
+header h2
+{
+    font-size: 2.5rem;
+    line-height: 100px;
+    text-align: center;
+    text-shadow: 4px 0px 1px #918d8d;
+}
+
+.row
+{
+    height: calc(100vh - 105px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid salmon; */
+}
+
+.row .col
+{
+    padding: 10px;
+    width: 100%;
+    height:90% ;
+    /* border: 2px solid khaki; */
+    display: flex;
+    column-gap: 20px;
+    align-items:center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.row .col .box
+{
+    width: 10%;
+    height: 125px ;
+    border-radius: 20px;
+    /*border: 2px solid brown;*/
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    /*box-shadow: 0 0 10px 1px #e5f6a8;*/
+}
+
+.row  button
+{
+    align-self: center;
+    padding: 10px 20px;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    box-shadow: 0 0 2px 3px #e8e8e8;
+}
+
+#cyan
+{
+    background-color: cyan;
+}
+
+#tomato
+{
+    background-color: tomato;
+}
+
+#teal
+{
+    background-color: teal;
+}
+
+#orange
+{
+    background: orange;
+}
+
+#black
+{
+    background: black;
+}
+
+#lightgray
+{
+    background-color: lightgray;
+}
+
+#violet
+{
+    background-color:violet;
+}
+
+#royalblue
+{
+    background-color: royalblue;
+}
+
+#lightcoral
+{
+    background-color: lightcoral;
+}
+
+#cadetblue
+{
+    background-color: cadetblue;
+}
+
+#peru
+{
+    background: peru;
+}
+
+#firebrick
+{
+    background-color: firebrick;
+}
+
+#rosybrown
+{
+    background-color: rosybrown;
+}
+
+#palevioletred
+{
+    background-color: palevioletred;
+}
+
+#sandybrown
+{
+    background-color: sandybrown;
+}
+
+#tan
+{
+    background-color: tan;
+}
+
+
