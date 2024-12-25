@@ -1,3 +1,4 @@
+// Q) Can we change the value of Math.PI
 console.log(Object.getOwnPropertyDescriptor(Math,"PI")) // it gives hidden properties of Object .
 //We cannot change some objects of javaScript because they are not writable and got a extra layered security using CPP and above method shows a object and its property means key the output of it will come as :-
 // {value: 3.141592653589793, writable: false, enumerable: false, configurable: false}
